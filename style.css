@@ -1,80 +1,82 @@
+@media (max-width: 600px){  /*media query para dispositivos moviles hasta 600px*/
+
+  nav ul{
+    padding-left: 10%;
+  }
 
 
+  iframe{
+    height: auto;           /* Mantiene el alto de los videos para evitar un marco demasiado pequeño*/
+  }
 
+  footer{
+    display: flex;          /*Nos alinea el contenido del footer*/
+    flex-direction: row;    /*Direccion en fila*/
+    padding-left: 10%;      /*Margen hacia adentro de un 10%*/
+    padding-right: 10%;
+  }
 
-/*common*/
-iframe{
-  height: 100%;
+  footer ul{
+    flex-wrap: nowrap;      /*Evita que los enlaces del footer se pongan en una doble fila*/
+    max-width: 20%;         /*el ancho al 20% divide la pantalla equitativamente entre la cantidad de listas del footer*/
+    font-size: small;       /*una fuente más pequeña nos asegura que los enlaces conservan una proporción*/
+  }
+
+  figure{
+    flex-wrap: nowrap;      /* evita que al pasar de una pantalla grande a una de menor tamaño se nos coloquen las imágenes en una sola columna*/
+    flex-direction: row;    /*nos mantiene dentro de lo posible, las imagenes en filas*/
+    max-width: auto;        /*conserva el ancho apropiado para las imagenes*/
+    max-height: auto;       /*conserva el alto apropiado*/
+  }
+
+  .divSecundarias{
+    gap: 2%;                /*con el atributo gap, creamos un espacio para evitar el apiñamiento de los elementos*/
+  }
+
 }
 
-.parrafo {
-  display: flex;
-  align-items: flex-start;
-  align-content: flex-start;
-  flex-direction: column;
-  padding: 3%;
-  margin-top: 0%;
+@media  (min-width: 601px ){ /* media query para pantallas de más de 600 px*/
+
+  body{
+    padding-left: 10%;       /*Establecemos márgenes laterales para que el contenido se vea más enmarcado y de menos sensación de vacío*/
+    padding-right: 10%;
+  }
+
+  .divSecundarias{
+    gap: 2%;                /*con el atributo gap, creamos un espacio para evitar el apiñamiento de los elementos*/
+  }
+
+  .button{
+    margin-left: 70%;       /*establecemos un margen menor al original para que el botón no se nos esconda detrás de la barra de scroll*/
+  }
+
+  footer{
+    padding-left: 20%;      /*Nos alinea el contenido del footer con un margen hacia adentro del 20%*/
+  }
 
 }
 
-.button {
-  position: fixed;
-  border-radius: 20px;
-}
 
-.button a{
-  text-decoration: none;
-  font-size: large;
-  font-family: 'Bebas Neue', sans-serif;
-  color: black;
-  background-color: #fff;
-}
+/*código para el estilo general*/
 
-
-.Titulos {
-  margin-top: 40px;
-}
-
-
-ol {
-  list-style: none;
-  text-decoration: none;
-}
-
-ol a{
-  list-style: none;
-  text-decoration: none;
-  color: black;
-  font-size: larger;
-}
-
-
-/*body*/
+/*body */
 
 body{
-  font-family: 'Bebas Neue';
-  font-size: larger;
-
+  font-family: 'Bebas Neue';  /*Tipografía elegida para todo el documento (La más utilizada en el cine)*/
+  font-size: larger;          /*Tamaño de la fuente*/
 }
-
-body h1, body h2, body h3, body h4, body h5 {
-  font-weight: 500;
-
-}
-
-
 
 .bodyIndex img{
-  width: 30%;
+  width: 30%;               /*Ajuste para el tamaño deseado en las imagenes de la portada*/
 }
 
 .bodyIndex{
-  background-color: #a9c4c4;
+  background-color: #a9c4c4;  /*Color de fondo de la portada*/
 }
 
-.bodyTerror{
-  background-color: #000000;
-  color: #fff;
+.bodyTerror{                /*Estilo según la sección en la que nos encontremos*/
+  background-color: #000000; /*Fondo según la sección*/
+  color: #fff;               /*Fuente según la sección*/
 }
 
 
@@ -83,41 +85,55 @@ body h1, body h2, body h3, body h4, body h5 {
   color: #fff;
 }
 
-
-
-
-/*nav*/
-
-nav{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: 0%;
+.bodyAnimacion{
+  background-color: #673d8f;
+  color: #fff;
+  
 }
 
-nav ul{
-  display: flex;
-  list-style: none;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 20%;
+
+.Titulos {                  /*Separación para todos los títulos de las diferentes páginas, de este modo ahorramos etiquetas <br>*/
+  margin-top: 40px;
+  font-weight: 500;         /*Ayuda a dar cuerpo y visibilidad a las letras, haciendo su delineado más grueso*/
+  text-align: center;       /*Alineamos el texto de los títulos en el centro*/
+}
+
+
+/*barra de navegavión <nav>*/
+
+nav{
+  display: flex;            /*Propiedad flex para alterar las dimensiones de los elementos y rellenar las posiciones*/
+  align-items: center;      /*Alineamos los elementos al centro */
+  width: 100%;              /*El ancho de nuestra barra de navegación englobará todo el ancho de la caja contenedora*/
+  margin: 0%;               /*Establecemos un 0% de márgenes*/
+}
+
+nav ul{                     /*La lista contenedora de los elementos de nuestra barra de navegación*/
+  display: flex;            /*Flex para que ocupen el espacio indispensable y poder colocar los elementos en fila*/
+  list-style: none;         /*Quitamos los puntos que trae por defecto cada elemento de una lista*/
+  padding-left: 25%;        /*Establecemos márgenes automaticos*/
+  padding-right: 20%;
+  gap: 15%;                 /*Interponemos un espaciado entre elementos para evitar el apiñamiento*/
 
 }
 
 nav a{
-  text-decoration: none;
-  font-size: xx-large;
-  font-family: 'Bebas Neue', sans-serif;
-  color: #fff;
+  text-decoration: none;    /*Quitamos el subrallado a los enlaces además del juego de colores por defecto*/
+  font-size: xx-large;      /*Establecemos el tamaño de las letras para una mejor visibilidad y evitar usar etiquetas extra en el html*/
+  font-family: 'Bebas Neue', sans-serif;  /*Tipografía elegida*/
+  color: #fff;            /*Color del texto*/
 }
 
-nav img{
-  max-width: 15%;
+nav img{                    /*Imagen dentro de la barra de navegación*/
+  max-width: 15%;           /*Ancho máximo elegido*/
 }
 
+nav a:hover{
+  background-color: #ffffff;  /* Color de fondo al pasar el ratón sobre los enlaces */
+}
 
 .navIndex {
-  background-color: #000000; /* Color de fondo para el nav */
+  background-color: #000000; /* Color de fondo para los diferentes nav según la clase */
 }
 
 .navTerror {
@@ -129,75 +145,141 @@ nav img{
 }
 
 .navAnimacion {
-  
+  background-color: #db5a6f;
 }
 
 
-.navIndex a:hover {
-  background-color: #ffffff; /* Color de fondo al pasar el ratón sobre los enlaces */
+
+.navIndex a:hover {         /*Color del texto en los enlaces en el nav al pasar el ratón por encima*/
   color: black;
 }
 
 .navTerror a:hover {
-  background-color: #ffffff; /* Color de fondo al pasar el ratón sobre los enlaces */
   color: #880808;
 }
 
 .navDrama a:hover {
-  background-color: #ffffff; /* Color de fondo al pasar el ratón sobre los enlaces */
   color: #11BB7C;
 }
 
 .navAnimacion a:hover{
-
-
+  color: #db5a6f;
 }
+
+
+
+/*common*/
+iframe{
+  height: 100%;             /*Ajuste de la altura de los videos para ajustarse a su caja*/
+  border: none;             /*Quitamos el borde por defecto de los videos, dándo un aspecto más flotante*/
+  border-radius: 10%;       /*Damos un pequeño redondeo a las esquinas para dar un aspecto más agradable y menos serio*/
+}
+
+ol {                        /*El uso de ol en vez de ul es para evitar una cantidad excesiva de clases, sólo aplica a la portada.*/
+  list-style: none;         /* quitamos la numeración de los elementos de la lista*/
+  text-decoration: none;    /*Quitamos el subrallado y los colores por defecto de los enlaces*/
+}
+
+ol a{
+  text-decoration: none;    /*Quitamos el delineado de los enlaces en las listas ordenadas*/
+  color: black;           /*Color del texto*/
+  font-size: larger;        /*Tamaño de la fuente*/
+}
+
+
+
+.parrafo {                  /*Clase para modificar ciertos párrafos*/
+  display: flex;            /*Propiedad flex para facilitrar dónde ponemos éstos párrafos*/
+  align-items: flex-start;  /*Alineamos los párrafos al principio de su contenedor (arrriba)*/
+  align-content: flex-start; /*Alineamos el contenido de los párrafos al principio del contenedor (arriba)*/
+  flex-direction: column;   /*Dirección de orientación de las cajas del contenedor*/
+  margin-top: 0%;           /*Establecemos un márgen superior de 0% para que quede alineado el contenido con el video*/
+}
+
+button{                     /*Forma y estilo del botón*/
+  display: inline-block;    /*Como se dispondrán los elementos dentro del botón*/
+  background: #ffffff;    /*Folor de fondo del botón*/
+  border-radius: 2em;       /*Redondeo de las esquinas del botón*/
+  border:none;              /*Borramos el borde interno del botón*/
+  outline: 2px solid #ffffff; /*Delineado exterior del botón*/
+  outline-offset: 1px;      /*Separación entre el cuerpo del botón y la linea exterior*/
+}
+
+
+.button a{
+  text-decoration: none;
+  color: black;           /*Color de las letras del boton*/
+  
+}
+
+.button {                   /*Propiedades para el botón*/
+  position: fixed;          /*Lo fijamos en una posicion específica para que nos siga por todo el navegador*/
+  margin-left: 80%;         /*Establecemos un margen izquierdo para que se nos sitúe a la derecha de la página*/
+  opacity: 0.6;             /*Transparencia para que no distraiga de la lectura*/
+  padding-top: 4px;         /*Evitamos que se nos ponga por encima de la barra de navegación cuando estamos al inicio de la página*/
+}
+
+
+
+
 
 
 /*main*/
 
-.mainSecundarias ul li{
-  display: inline-flex;
-  list-style: none;
-  flex-direction: row;
+.mainSecundarias ul li{     /*Estilo para todas las listas dentro de la sección main*/
+  display: inline-flex;     /*Ponemos los elementos en linea*/
+  list-style: none;         /*Quitamos el punto de los elementos*/
+  flex-direction: row;      /*El flujo será en linea*/
 }
-.mainSecundarias figure{
-  display: inline-flex;
-  flex-direction: column;
-  margin: 0%;
+.mainSecundarias figure{    /*Estilo para las tarjetas del reparto en el main*/
+  display: inline-flex;     /*Las disponemos en fila*/
+  flex-direction: column;   /*De esta manera el texto estará debajo de cada foto*/
+  margin: 2%;               /*margen adecuado para evitar que se pegue el texto a las imágenes */
 }
 
 .mainSecundarias figure img{
-  max-width: 50%;
+  max-width: 60%;           /*ancho máximo que tomarán las imagenes en su contenedor*/
+
 }
 
-.divSecundarias {
-  display: flex;
-  align-content: flex-start;
-  flex-direction: row;
+.divSecundarias {           /*Clase para las cajas que contendrán las películas*/
+  display: flex;            /*propiedad flex para adaptar el contenido según necesidad*/
+  align-content: flex-start;  /*alineamos el contenido al principio del contenedor (izquierda)*/
+  flex-direction: row;      /*Establecemos el flujo del contenido en una fila*/
+}
 
+#centrado{                  /*id para centrar las imágenes de la portada*/
+  margin:10px auto;         /*Márgen de 10px a todas las imagenes con centrado automático*/
+  display:block;            /*disposición en bloque*/
+  width: 550px;             /*ancho de las imágenes*/
+  height: 250px;            /*alto de las imagenes*/
 }
 
 
 
 /*Footer*/
 
-
-footer ul{
-  display: inline-block;
-  list-style: none;
+footer ul{                  /*Estilo para el pie de cada página*/
+  display: inline-block;    /*disposición de los elementos en linea*/
+  list-style: none;         /*quitamos el punto a los elementos de la lista*/
 }
 
 
-footer ul a{
-  text-decoration: none;
-  font-family: 'Bebas Neue', sans-serif;
-  color: #fff;
+footer ul a{                /*estilo para los enlaces dentro del footer*/
+  text-decoration: none;    /*quitamos el subrallado y los colores por defecto*/
+  font-family: 'Bebas Neue', sans-serif;  /*tipografía de los elementos del footer*/
+  color:#fff;             /*Color de las letras del footer*/
+}
+
+footer ul a:hover{          /*Estilos de los enlaces del footer al pasar el ratón por encima*/
+  background-color: white;  /*Fondo en blanco*/
+  border-radius: 15%;       /*Redondeo de un 15% en las esquinas*/
 }
 
 
-.indexFooter{
+.indexFooter{               /*Estilo del footer según la sección*/
   background-color: black;
+  opacity: 0.9;
 }
 
 .terrorFooter{
@@ -208,28 +290,22 @@ footer ul a{
   background-color: #11BB7C;
 }
 
+.animacionFooter{
+  background-color: #db5a6f;
+}
+
 .indexFooter ul a:hover{
   color: black;
-  background-color: white;
-  border-radius: 15%;
   }
 
 .terrorFooter ul a:hover{
   color: #880808;
-  background-color: white;
-  border-radius: 15%;
 }
 
 .dramaFooter ul a:hover{
   color: #11BB7C;
-  background-color: white;
-  border-radius: 15%;
 }
 
-
-
-
-
-
-
-
+.animacionFooter ul a:hover{
+  color: #db5a6f;
+}
