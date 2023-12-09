@@ -1,4 +1,4 @@
-@media (max-width: 600px){  /*media query para dispositivos moviles hasta 600px*/
+@media (min-width:451px) and (max-width: 600px){  /*media query para dispositivos moviles hasta 600px*/
 
   nav ul{
     padding-left: 10%;
@@ -53,6 +53,36 @@
   footer{
     padding-left: 20%;      /*Nos alinea el contenido del footer con un margen hacia adentro del 20%*/
   }
+
+}
+
+@media (max-width: 450px) {
+
+  body{
+    margin-left: 0%;
+    margin-right: -10%;
+    font-size: xx-small;
+  }
+
+  nav{
+    display: inline-flex;
+    align-content: flex-start;
+    font-size: xx-small;
+    margin-right: 0%;
+    gap:1%
+  }
+
+  nav ul{
+    max-width: 10%;
+    padding-right: 200%;
+    padding-left: 0%;
+    padding-right: 25%;
+  }
+
+  nav img{
+    max-width: auto;
+  }
+
 
 }
 

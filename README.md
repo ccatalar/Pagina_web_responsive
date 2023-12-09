@@ -39,5 +39,10 @@ Alan Gauna: Encargado del css, diseño de la iconografía y la división del htm
 Hemos desarrollado en conjunto la temática de la página y planificado su estructura, además de la continua comunicación para acordar el diseño y patrón de colores.
 
 
-6.Utilizar listas o marcadores para una presentación clara.
+6.Screenshots.
 
+[img1]: /Screenshots/navheader_animacion.jpg "header de la sección animación"
+[img2]: /Screenshots/Animacion_seccionpeliculas.jpg "ejemplo de sección de las peliculas en Animacion"
+[img3]: /Screenshots/Footer%20animación.jpg  "footer de la sección animación"
+[img4]: /Screenshots/Portada_top.jpg "portada de la sección animacion"
+[img5]: /Screenshots/Boton.jpg "botón para volver al inicio"
